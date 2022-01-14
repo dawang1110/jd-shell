@@ -306,7 +306,7 @@ function panelon() {
   if [ $? -ne 0 ]; then
     echo -e "开启失败，请截图并复制错误代码并提交Issues！\n"
   else
-    echo -e "确认看过WIKI，打开浏览器，地址为你的127.0.0.1:5678\n"
+    echo -e "确认看过WIKI，打开浏览器，地址为你的127.0.0.1:6789\n"
   fi
 }
 
@@ -321,7 +321,7 @@ function paneloff() {
 ## 重置密码
 function Reset_Pwd() {
   cp -f ${ShellDir}/sample/auth.json ${ConfigDir}/auth.json
-  echo -e "控制面板重置成功，用户名：admin，密码：admin5678\n"
+  echo -e "控制面板重置成功，用户名：admin，密码：admin6789\n"
 }
 
 ## 运行京东脚本
