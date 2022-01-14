@@ -112,10 +112,10 @@ Input_ContainerName
 
 # 输入端口号
 Input_PanelPort() {
-    echo -n -e "\n\e[33m请输入控制面板端口号[默认为：6789]->\e[0m"
+    echo -n -e "\n\e[33m请输入控制面板端口号[默认为：5678]->\e[0m"
     read panel_port
     if [ -z "$panel_port" ]; then
-        PanelPort="6789"
+        PanelPort="5678"
     else
         PanelPort=$panel_port
     fi
@@ -227,7 +227,7 @@ docker run -dit \
     $NeedDirConfig \
     $NeedDirLog \
     $NeedDirScripts \
-    -p $PanelPort:6789 \
+    -p $PanelPort:5678 \
     --name $ContainerName \
     --hostname jd \
     --restart always \
@@ -236,7 +236,7 @@ docker run -dit \
 log "\n下面列出所有容器"
 docker ps
 
-log "\n安装已经完成。\n请访问 http://<ip>:${PanelPort} 进行配置\n初始用户名：admin，初始密码：admin6789"
+log "\n安装已经完成。\n请访问 http://<ip>:${PanelPort} 进行配置\n初始用户名：admin，初始密码：admin5678"
 rm -f $ShellDir/$ShellName
 echo "进入容器命令为########docker exec -it jd /bin/bash"
 # 更新于5/26
