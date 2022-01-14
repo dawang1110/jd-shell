@@ -13,7 +13,7 @@ services:
       - ./jd1/log:/jd/log
       - ./jd1/scripts:/jd/scripts    # 如果想要看到lxk0301大佬的js脚本，以方便的添加额外脚本，可以解除本行注释，下同。
     ports:
-      - 6789:6789
+      - 5678:5678
     environment: 
       - ENABLE_HANGUP=true            # 是否在启动容器时自动启动挂机程序?
       - ENABLE_WEB_PANEL=true         # 是否在启动容器时自动启动控制面板?
@@ -30,7 +30,7 @@ services:
       - ./jd2/config:/jd/config
       - ./jd2/log:/jd/log
     ports:
-      - 6780:6780
+      - 5678:5678
     environment: 
       - ENABLE_HANGUP=true            # 是否在启动容器时自动启动挂机程序?
       - ENABLE_WEB_PANEL=true         # 是否在启动容器时自动启动控制面板?
@@ -47,7 +47,7 @@ services:
       - ./jd3/config:/jd/config
       - ./jd3/log:/jd/log
     ports:
-      - 6781:6781
+      - 5679:5679
     environment: 
       - ENABLE_HANGUP=true            # 是否在启动容器时自动启动挂机程序?
       - ENABLE_WEB_PANEL=true         # 是否在启动容器时自动启动控制面板?
